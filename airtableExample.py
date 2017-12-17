@@ -99,3 +99,25 @@ print (json.dumps(updatedRecord))
 deletedRecord = atf.deleteRecord(exampleTable,createdId)
 
 print (json.dumps(deletedRecord))
+
+
+
+# example of creating a filterlist which returns only
+# those records which match a criteria
+# the criteria needs to be defined using airtable formulae
+# which are explained here -https://support.airtable.com/hc/en-us/articles/203255215-Formula-field-reference
+
+filterlist =    {
+                "fields[0]" : "nameOfField1",
+                "fields[1]" : "nameOfField2",
+                "sort[0][field]"  : "sortField",
+                "sort[0][direction]" : "asc",
+                "filterByFormula": "OR(nameOfField3 != 'Completed', nameOfField4 != 'name')",
+                }
+
+
+# this will return all values of field1 & field2 where either field3 is not equal to Completed or
+# field for is not equal to name
+
+result = atf.getRecords(exampleTable, filterlist)
+print (json.dumps(result))
