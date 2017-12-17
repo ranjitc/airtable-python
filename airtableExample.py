@@ -60,7 +60,12 @@ print (json.dumps(createdRecord['fields']))
 print (createdRecord['id'])
 print (createdRecord['createdTime'])
 
+# to fetch a single record, we need its id
+# we can use the id returned in the above example
+
 createdId = createdRecord['id']
+
+# once you have an id you can fetch that record
 
 getarecord = atf.getRecord(exampleTable,createdId)
 
