@@ -1,6 +1,11 @@
-**Python functions to filter, get, create, patch, put(update) and delete Airtable Data**
+###Python functions to filter, get, create, patch, put(update) and delete Airtable Data###
 
-*Brief Explanation*
+####*Requirements*####
+1. Python 3
+2. Python Modules - [requests](https://python.org/pypi/requests), json, urllib
+3. An [Airtable](https://airtable.com) Account
+
+####*Brief Explanation*####
 
 1. Prepare constants file
 	1. Enter api, app values for your database
@@ -11,7 +16,7 @@
 2. Create a new python file and import json and airtablefunctions. Files should be in same directory. You can import files in many ways. Look at https://stackoverflow.com/questions/6695798/what-is-the-difference-between-from-random-import-and-import-random-random for clarification.
 
 Since airtablefunctions in our case has ONLY functions and constants (which anyways should not be changed or reused for our use case) it is safe to use:
-``` 
+```python
 from airtablefunctions import *
 ```
 but for the sake of clarity it is better to use:
@@ -23,16 +28,16 @@ this allows us to use atf. in code instead of airtablefunctions. this does have 
 if json is not explicity imported then it will have to be called as atf.json or airtablefunctions.json depending on how you have imported airtablefunctions
 
 to simplify this import json from airtablefunctions using its own name of json, with this method you can simply call json as json
-```
+```python
 from airtablefunctions import json
 ```
 you could also import json directly
-```
+```python
 import json
 ```
 
 to summarise
-```
+```python
 import airtablefunctions as atf
 from airtablefunctions import json
 ```
