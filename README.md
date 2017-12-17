@@ -1,11 +1,11 @@
-###Python functions to filter, get, create, patch, put(update) and delete Airtable Data###
+###Python functions to filter, get, create, patch, put(update) and delete Airtable Data
 
-####*Requirements*####
+####*Requirements*
 1. Python 3
 2. Python Modules - [requests](https://python.org/pypi/requests), json, urllib
 3. An [Airtable](https://airtable.com) Account
 
-####*Brief Explanation*####
+####*Brief Explanation*
 
 1. Prepare constants file
 	1. Enter api, app values for your database
@@ -20,7 +20,7 @@ Since airtablefunctions in our case has ONLY functions and constants (which anyw
 from airtablefunctions import *
 ```
 but for the sake of clarity it is better to use:
-``` 
+```python
 import airtablefunctions as atf
 ```
 this allows us to use atf. in code instead of airtablefunctions. this does have some limitations but it does not affect us as we are not going to update or call any values from airtablefunctions out of the predefined use.
